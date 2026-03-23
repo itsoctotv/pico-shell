@@ -12,7 +12,7 @@ add_executable(boot ${SRC_FILES})
 
 
 # Link Pico SDK libraries
-target_link_libraries(boot pico_stdlib)
+target_link_libraries(boot pico_stdlib hardware_spi)
 
 # Enable USB output, UART output, etc.
 pico_enable_stdio_usb(boot 1)
