@@ -1,6 +1,8 @@
 #ifndef SHELL_H
 #define SHELL_H
 
-int shellLoop();
+#include <stdbool.h>
 
+int shellLoop();
+bool isUserInputAbort();
 #endif

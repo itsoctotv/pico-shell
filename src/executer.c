@@ -9,12 +9,12 @@
 // declare external functions so the compiler sees them
 extern int cmd_help(char **argv, int argc);
 extern int cmd_clear(char **argv, int argc);
-extern int cmd_readFlash(char **argv, int argc);
+extern int cmd_handleFlash(char **argv, int argc);
 
 Command cmd_table[] = {
     {"help",   cmd_help},
     {"clear",   cmd_clear},
-    {"readflash",   cmd_readFlash},
+    {"flash",   cmd_handleFlash},
     {NULL,   NULL} // value to mark the end
 };
 

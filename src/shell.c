@@ -6,7 +6,7 @@
 #include <string.h>
 #include "parser.h"
 #include "executer.h"
-
+#include <stdbool.h>
 
 char lineBuffer[MAX_BUFFER_LENGTH];
 char *argv[MAX_ARGS];
@@ -49,4 +49,15 @@ int shellLoop(){
 		
 	}
 	return 0;
+}
+
+
+bool isUserInputAbort(){
+	int key = getchar_timeout_us(0); // gets the key
+	if(key == 3){
+		//ctrl+c for abort (3)
+		return true;
+	}
+	return false;
+		
 }
