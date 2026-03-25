@@ -7,6 +7,7 @@
 #include "parser.h"
 #include "executer.h"
 #include <stdbool.h>
+#include "envvars.h"
 
 char lineBuffer[MAX_BUFFER_LENGTH];
 char *argv[MAX_ARGS];
@@ -16,7 +17,7 @@ int argc;
 int shellLoop(){
 
 	while (1){
-		printf("> ");
+		printf("[%s] > ", ENV_CURRENT_PATH);
 		
 		// clear buffers
 		memset(lineBuffer, '\0', MAX_BUFFER_LENGTH);
